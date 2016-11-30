@@ -8,15 +8,16 @@ mv vitasdk $VITASDK
 mkdir build
 mkdir patches
 
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/patches/expat-25c6393829.patch -o patches/expat-25c6393829.patch
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/patches/opus-update-ssl-curl.patch -o patches/opus-update-ssl-curl.patch
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/patches/expat-25c6393829.patch -o patches/expat-25c6393829.patch
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/patches/opus-update-ssl-curl.patch -o patches/opus-update-ssl-curl.patch
 
 cd build
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/scripts/007-vdpm.sh | bash
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/scripts/010-vita-openssl.sh | bash
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/scripts/011-vita-curl.sh | bash
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/scripts/012-expat.sh | bash
-curl -sL https://github.com/d3m3vilurr/vitatoolchain/raw/update-ssl-curl/scripts/013-opus.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/007-vdpm.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/009-libftpvita.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/010-vita-openssl.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/011-vita-curl.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/012-expat.sh | bash
+curl -sL https://github.com/ooPo/vitatoolchain/raw/master/scripts/013-opus.sh | bash
 cd ..
 rm -rf build patches
 rm -rf $VITASDK.bak
