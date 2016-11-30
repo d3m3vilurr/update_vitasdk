@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 mkdir -p $VITASDK
 mv $VITASDK $VITASDK.bak
-curl -s https://api.github.com/repos/d3m3vilurr/buildscripts/releases | grep browser_download_url | grep linux | head -n 1 | cut -d '"' -f 4 | xargs curl -L | tar xvj
+curl -s https://api.github.com/repos/vitasdk/autobuilds/releases | grep browser_download_url | grep linux | head -n 1 | cut -d '"' -f 4 | xargs curl -L | tar xvj
 mv vitasdk $VITASDK
 #cp -r vitasdk $VITASDK
 
